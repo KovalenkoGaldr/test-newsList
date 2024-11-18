@@ -14,7 +14,7 @@ function* loadMessagesSaga(action: { payload: any }): Generator {
     formData.append("messageId", messageId);
     formData.append("oldMessages", action.payload.oldMessages || false);
     const response = (yield call(() =>
-      axios.post("http://a0830433.xsph.ru/", formData, {
+      axios.post("https://a0830433.xsph.ru/", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
